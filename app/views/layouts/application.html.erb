@@ -14,19 +14,40 @@
 	</head>
 
 
-  <body>
-    <nav>
-  <ul>
-    <li>Home</li>
-    <li>About</li>
-    <li>Contact</li>
-  </ul>
-</nav>
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+      <div class="container">
+         <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
 
-<%= yield %>
-
-<footer>
-  &copy; 2017 James
-</footer>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><%= link_to 'Home', root_path %></li>
+          <li><%= link_to 'About', static_pages_about_path %></li>
+          <li><%= link_to 'Contact', static_pages_contact_path %> </li>
+        </ul>
+      </div>
+    </nav>
+  
+    <%= yield %>
+    
+    <div class="navbar navbar-default navbar-static-bottom">
+      <div class="container footer">
+        <span class="navbar-text">
+          &copy James Thomas Haggerty
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
+  
+  
+  
   </body>
 </html>
